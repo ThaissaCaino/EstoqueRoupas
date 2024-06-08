@@ -1,0 +1,53 @@
+form{
+    /* apenas centraliza o form na página */
+    margin: 0 auto;
+    width: 400px;
+    /* Para ver as formas do formulário */
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+}
+
+form div + div {
+    margin-top: 1em;
+}
+
+label{
+    /* Para ter certeza que todas as labels tem o mesmo tamanho e estão propriamente alinhadas */
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+}
+
+input, textarea{
+    /* Para certificar-se que todos os campos de texto tem as mesmas configurações de fonte */
+    font: 1em sans-serif;
+
+    /* dar tamanho a todos os campos de texto */
+    width: 300px;
+    box-sizing: border-box;
+
+    /* armonizar bordas */
+    border: 1px solid #999;
+}
+
+input:focus{
+    /* dar destaque ao elemento ativo */
+    border-color: #000;
+}
+
+.button {
+    /* posicionar os botões para a mesma posição dos campos de texto */
+    padding-left: 90px; /* mesmo tamanho que os elementos do tipo label */
+  }
+  button {
+    /* representa  o mesmo espaço que o espaço entre as labels e os seus campos de texto*/
+    margin-left: 0.5em;
+  }
+  
+  .title{
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;    
+  }
