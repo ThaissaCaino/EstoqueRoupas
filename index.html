@@ -3,26 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fornecedores</title>
+    <title>Estoque de roupa</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <p class="title">Fornecedores</p>
+    <p class="title">Cadastro de fornecedores e roupas</p>
     <form action="/pagina-processa-dados-do-form" method="post"> 
         <div>
-            <label for="nome">Nome:</label>
+            <label for="nome">Nome do fornecedor:</label>
             <input type="text" id="nome" name="fornecedor_nome"/>
         </div>
         <div>
-            <label for="endereco">Endereço:</label>
+            <label for="endereco">Endereço do fornecedor:</label>
             <input type="endereco" id="endereco" name="fornecedor_endereco"/>
         </div>
         <div>
-            <label for="fone">Telefone:</label>
+            <label for="fone">Telefone do fonecedor:</label>
             <input id="fone" name="fornecedor_fone"></input>
         </div>
         <div class="button">
             <button type="submit">Cadastrar Fornecedor</button>
+        </div>
+        <div>
+            <label for="nome">Nome da roupa:</label>
+            <input type="text" id="nome" name="roupa_nome"/>
+        </div>
+        <div>
+            <label for="endereco">Tamanho da roupa:</label>
+            <input type="endereco" id="endereco" name="roupa_tamanho"/>
+        </div>
+        <div>
+            <label for="fone">Preço da roupa:</label>
+            <input id="fone" name="roupa_preco"></input>
+        </div>
+        <div class="button">
+            <button type="submit">Cadastrar Roupa</button>
         </div>
     </form>
 
