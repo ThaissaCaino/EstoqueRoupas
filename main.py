@@ -1,15 +1,15 @@
-import mysql.connector
+from database import connect_to_database, execute_query
+from flask import Flask, render_template
 
-conexao = mysql.connector.connect(
-    host="localhost",
-    user="estoque_roupas_how_vi",
-    passwd="estoque_roupas_how_vi",
-    database="estoque_roupas_how_vi"
-)
+app = Flask(__name__)
 
-cursor= conexao.cursor()
+@app.route('/')
+def index():
+    return render_template('index.html')
 
-#local do CRUD
+@app.route('/consulta')
+def consulta():
+    return render_template('consulta.html')
 
-cursor.close()
-conexao.close()
+if __name__ == '__main__':
+    app.run(debug=True)
