@@ -6,38 +6,34 @@
     <title>Cadastro de roupa</title>
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
+<html>
+<head>
+    <title>Estoque de Roupas</title>
+</head>
 <body>
-    <p class="title">Cadastro de fornecedores e roupas</p>
-    <form action="/pagina-processa-dados-do-form" method="post"> 
-        <div>
-            <label for="nome">Nome do fornecedor:</label>
-            <input type="text" id="nome" name="fornecedor_nome"/>
-        </div>
-        <div>
-            <label for="endereco">Endereço do fornecedor:</label>
-            <input type="endereco" id="endereco" name="fornecedor_endereco"/>
-        </div>
-        <div>
-            <label for="fone">Telefone do fonecedor:</label>
-            <input id="fone" name="fornecedor_fone"></input>
-        </div>
+    <h1>Cadastro de Roupas e fornecedores</h1>
+    <form action="/" method="POST">
+        <label for="roupa_nome">Nome da Roupa:</label>
+        <input type="text" id="roupa_nome" name="roupa_nome" required><br><br>
 
-        <div>
-            <label for="nome">Nome da roupa:</label>
-            <input type="text" id="nome" name="roupa_nome"/>
-        </div>
-        <div>
-            <label for="endereco">Tamanho da roupa:</label>
-            <input type="endereco" id="endereco" name="roupa_tamanho"/>
-        </div>
-        <div>
-            <label for="fone">Preço da roupa:</label>
-            <input id="fone" name="roupa_preco"></input>
-        </div>
-        <div class="button">
-            <button type="submit">Cadastrar</button>
-        </div>
+        <label for="roupa_tamanho">Tamanho:</label>
+        <input type="text" id="roupa_tamanho" name="roupa_tamanho" required><br><br>
+
+        <label for="roupa_preco">Preço:</label>
+        <input type="number" id="roupa_preco" name="roupa_preco" required><br><br>
+
+        <label for="fornecedor_nome">Nome do Fornecedor:</label>
+        <input type="text" id="fornecedor_nome" name="fornecedor_nome" required><br><br>
+
+        <label for="fornecedor_endereco">Endereço do Fornecedor:</label>
+        <input type="text" id="fornecedor_endereco" name="fornecedor_endereco" required><br><br>
+
+        <label for="fornecedor_fone">Telefone do Fornecedor:</label>
+        <input type="text" id="fornecedor_fone" name="fornecedor_fone" required><br><br>
+
+        <input type="submit" value="Cadastrar">
     </form>
-
 </body>
 </html>
+
+</html> 

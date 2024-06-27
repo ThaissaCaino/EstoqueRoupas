@@ -23,13 +23,13 @@ def index():
         fornecedor_endereco = request.form['fornecedor_endereco']
         fornecedor_fone = request.form['fornecedor_fone']
 
-        # Inserir  no database
-        inserir_roupas = f'INSERT INTO roupas(nome, tamanho, preco) VALUES ("{roupa_nome}", "{roupa_tamanho}", {roupa_preco})'
-        cursor.execute(inserir_roupas)
+        # Inserir no database (using parameterized queries)
+        inserir_roupas = "INSERT INTO roupas(nome, tamanho, preco) VALUES (%s, %s, %s)"
+        cursor.execute(inserir_roupas, (roupa_nome, roupa_tamanho, roupa_preco))
         conexao.commit()
 
-        inserir_fornecedor = f'INSERT INTO fornecedor(nome, endereco, telefone) VALUES ("{fornecedor_nome}", "{fornecedor_endereco}", "{fornecedor_fone}")'
-        cursor.execute(inserir_fornecedor)
+        inserir_fornecedor = "INSERT INTO fornecedor(nome, endereco, telefone) VALUES (%s, %s, %s)"
+        cursor.execute(inserir_fornecedor, (fornecedor_nome, fornecedor_endereco, fornecedor_fone))
         conexao.commit()
 
         # display mensagem de sucesso
@@ -38,9 +38,6 @@ def index():
     return render_template('index.html')
 
 
-# @app.route('/')
-# def index():
-#     return render_template('index.html')
 
 @app.route('/consulta')
 def consulta():
