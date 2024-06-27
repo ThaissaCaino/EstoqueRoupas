@@ -39,9 +39,11 @@ def index():
 
 
 
-@app.route('/consulta')
+@app.route('/consulta', methods=['GET', 'POST'])
 def consulta():
-    return render_template('consulta.html')
+    listar_roupas = cursor.execute('''SELECT * FROM roupas''').fetchall()
+    listar_fornecedor = cursor.execute('''SELECT * FROM fornecedor''').fetchall()
+    return render_template('consulta.html', listar_roupas=listar_roupas, listar_fornecedor=listar_fornecedor, titulo="Lista das roupas e fornecedores") #usar listar_fornecedor e listar_roupas no consulta.html 
 
 if __name__ == '__main__':
     app.run(debug=True)
