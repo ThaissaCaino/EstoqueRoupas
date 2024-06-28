@@ -55,7 +55,7 @@ def index():
 
 @app.route('/consulta', methods=['GET', 'POST'])
 def consulta():
-    cursor.execute('''SELECT * FROM 
+    cursor.execute('''SELECT r.nome, r.tamanho, r.preco, f.nome, f.endereco, f.telefone FROM 
                 `estoque_roupas_how_vi`.roupas r
             JOIN 
                 `estoque_roupas_how_vi`.roupas_fornecedor rf ON r.id_roupas = rf.id_roupas
