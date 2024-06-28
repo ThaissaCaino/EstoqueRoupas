@@ -1,50 +1,47 @@
-Universidade do Vale do Itajaí - UNIVALI
-Trabalho da disciplina Hands on Work 6:
-Defina uma entidade de dados e que possua uma segunda entidade vinculada. O tipo de vínculo deve configurar uma relação de composição ou agregação da orientação a objetos. 
-* Cada entidade deve ter no mínimo 3 atributos – a ser definido pelo aluno. 
-ETAPA 1: Desenhe um diagrama de classes e também um diagrama de entidade relacionamento representando estas duas entidades, na perspectiva de Programação Orientada a Objetos e na perspectiva de tabelas, respectivamente.  
-ETAPA 2:Implemente interfaces web (telas) para realização de cadastro e listagem dos dados destas entidades interagindo com banco de dados. Por meio de telas o usuário deve ser capaz de: 
-    -Incluir registros para cada uma das duas entidades; e  
-    -Listar todos os registros de cada entidade. 
+### Universidade do Vale do Itajaí - UNIVALI
+### Trabalho da disciplina Hands on Work 6
 
+---
 
-Projeto de Sistema de Gestão de Estoque de Roupas 
-  Descrição: o projeto de sistema computacional com persistência de dados de um Sistema de Gestão de Estoque de Roupas propõe a criação de uma estrutura de dados composta por entidades interligadas. Nesse contexto, cada entidade representa um elemento do domínio do problema e possui uma segunda entidade vinculada, configurando uma relação de composição. Cada entidade possui três atributos. 
+## Projeto de Sistema de Gestão de Estoque de Roupas
 
+**Descrição:** Este projeto de sistema computacional com persistência de dados propõe um Sistema de Gestão de Estoque de Roupas, onde entidades estão interligadas através de uma relação de composição. Cada entidade possui três atributos definidos pelo aluno.
 
-Sobre o sistema:
-A etapa inicial do projeto compreendeu a elaboração de um Diagrama de Classes e um Diagrama de Entidade Relacionamento, que representam as entidades e suas inter-relações tanto na perspectiva da programação orientada a objetos quanto na perspectiva de modelagem de tabelas. Essa fase inicial estabelece bases conceituais e estruturais do sistema a ser desenvolvido.
-Principais Funcionalidades:
-•	Painel Administrativo: Um painel intuitivo projetado para permitir aos administradores gerenciarem as operações relacionadas às roupas. Aqui, eles podem realizar as seguintes tarefas:
-   o	Adicionar Roupas: um formulário simples e direto que permite aos administradores adicionarem novas peças ao catálogo. Eles podem inserir informações detalhadas, como nome, fornecedor, tamanho e preço, para garantir um registro preciso.
-   o	Visualizar Inventário: uma função que possibilita aos administradores visualizarem o inventário completo de roupas disponíveis. Além das informações básicas, como nome e preço, detalhes como tamanho também são exibidos, proporcionando uma visão abrangente do estoque atual.
+### Sobre o sistema:
 
+A etapa inicial do projeto envolveu a criação de um Diagrama de Classes e um Diagrama de Entidade Relacionamento, representando as entidades e suas inter-relações na perspectiva da programação orientada a objetos e modelagem de tabelas, respectivamente. Esta fase estabelece as bases conceituais e estruturais do sistema a ser desenvolvido.
 
+### Principais Funcionalidades:
 
-    
-Tecnologias Utilizadas
+- **Painel Administrativo:** Um painel intuitivo para administração das operações relacionadas às roupas.
 
-    Front-end: React para uma interface de usuário interativa.
-    APIs: Whatsapp para que o cliente possa enviar mensagens sobre os produtos e para mais informações.
+  - **Adicionar Roupas:** Formulário direto para adição de novas peças ao catálogo, permitindo inserção de informações detalhadas como nome, fornecedor, tamanho e preço.
+  
+  - **Visualizar Inventário:** Função para visualização do inventário completo de roupas disponíveis, exibindo informações como nome, preço e tamanho.
 
-Como Executar
+### Tecnologias Utilizadas:
 
-    Clone o repositório para sua máquina local.
-    Instale as dependências com npm install.
-    Inicie o servidor com npm run dev.
-    Acesse http://localhost:5173 em seu navegador.
+- **Front-end:** HTML puro.
+- **Backend/API:** Python.
+- **Banco de Dados:** MySQL.
 
-Melhorias Futuras
+### Como Executar:
 
-    Integração com Banco de Dados: Sincronização com dispositivos vestíveis para rastrear atividades.
-    Segurança: Inclusão de funcionalidade de autenticação para garantir uma segurança para os usuários.
-    Projeto: Melhorar a organização do projeto e separar bem as responsabilidades.
+1. Instale o Python.
+2. Instale as dependências usando pip (flask, requests, mysql-connector).
+3. Clone o repositório para sua máquina local.
+4. Inicie o servidor com `python -u main.py`.
+5. Acesse http://localhost:5000 em seu navegador.
 
-Contribuições
+### Contribuições:
 
-Contribuições são sempre bem-vindas! Por favor, leia o arquivo CONTRIBUTING.md para mais detalhes sobre como contribuir para o projeto.
-Licença
+Contribuições são bem-vindas! Por favor, leia o arquivo CONTRIBUTING.md para mais detalhes sobre como contribuir para o projeto.
+
+### Licença:
 
 Distribuído sob a licença MIT. Veja LICENSE para mais informações.
-Contato
-Seu Nome - EMAIL DA EQUIPE
+
+### Contato:
+
+- Seu Nome
+- EMAIL DA EQUIPE
