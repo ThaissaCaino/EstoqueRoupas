@@ -40,7 +40,28 @@ input:focus{
     /* posicionar os botões para a mesma posição dos campos de texto */
     display: block;
     margin: 0 auto;
-    padding-left: 90px; /* mesmo tamanho que os elementos do tipo label */
+    width: 150px;
+
+    /* harmonizar os estilos */
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 1em; 
+    border: 1px solid #999;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    cursor: pointer;    
+
+  }
+
+  .button a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .button:hover{
+    background-color: #ccc;
   }
 
   .title{
@@ -49,3 +70,40 @@ input:focus{
     margin-bottom: 10px;
     margin-top: 10px;    
   }
+
+
+  .table{
+    margin: 0 auto;
+    width: 800px;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+.table th{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 8px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+}
+
+.table td{
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  } 
+
+.table tr:hover {
+    background-color: #ddd;
+}  

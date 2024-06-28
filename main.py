@@ -7,7 +7,7 @@ app = Flask(__name__)
 conexao = mysql.connector.connect(
     host="localhost",
     user="estoque_roupas_how_vi",
-    passwd="estoque_roupas_how_vi",
+    passwd="12345",
     database="estoque_roupas_how_vi"
 )
 cursor = conexao.cursor()
@@ -41,16 +41,17 @@ def index():
 
 @app.route('/consulta', methods=['GET', 'POST'])
 def consulta():
-    cursor.execute('''SELECT * FROM roupas''')
+    cursor.execute('''SELECT nome, tamanho, preco FROM roupas''')
     listar_roupas = cursor.fetchall()
 
-    cursor.execute('''SELECT * FROM fornecedor''')
+    cursor.execute('''SELECT nome, endereco, telefone FROM fornecedor''')
     listar_fornecedor = cursor.fetchall()
+    
     return render_template('consulta.html',
                             listar_roupas=listar_roupas, 
                             listar_fornecedor=listar_fornecedor, 
-                            titulo="Lista das roupas e fornecedores") 
-#usar listar_fornecedor e listar_roupas no consulta.html 
+                            titulo="Lista das roupas e fornecedores"
+                            )
 
 if __name__ == '__main__':
     app.run(debug=True)
