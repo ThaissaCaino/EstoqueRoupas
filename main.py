@@ -7,7 +7,7 @@ app = Flask(__name__)
 conexao = mysql.connector.connect(
     host="localhost",
     user="estoque_roupas_how_vi",
-    passwd="12345",
+    passwd="estoque_roupas_how_vi",
     database="estoque_roupas_how_vi"
 )
 cursor = conexao.cursor()
@@ -44,7 +44,7 @@ def index():
         cursor.execute(inserir_roupas_fornecedor, (idRoupa, idFornecedor))
         conexao.commit()
 
-        conexao.close()
+
 
         # display mensagem de sucesso
         return "Dados inseridos com sucesso!"
@@ -70,7 +70,7 @@ def consulta():
                            listar_dados=listar_dados,
                             titulo="Lista das roupas e fornecedores"
                             )
-    cursor.close()
-    
+
+
 if __name__ == '__main__':
     app.run(debug=True)
