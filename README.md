@@ -33,15 +33,8 @@ A etapa inicial do projeto envolveu a criação de um Diagrama de Classes e um D
 4. Inicie o servidor com `python -u main.py`.
 5. Acesse http://localhost:5000 em seu navegador.
 
-### Contribuições:
-
-Contribuições são bem-vindas! Por favor, leia o arquivo CONTRIBUTING.md para mais detalhes sobre como contribuir para o projeto.
-
-### Licença:
-
-Distribuído sob a licença MIT. Veja LICENSE para mais informações.
-
 ### Contato:
 
-- Seu Nome
-- EMAIL DA EQUIPE
+- NOMES : Caroline Roberta Bruno, Juliana Panizza Cugliari Dos Santos e Thaissa de Castro Almeida Caino.
+
+- EMAIL DA EQUIPE : carolinerobertabruno@gmail.com, juhcugliari@gmail.com, almeida.c.thaissa@gmail.com
