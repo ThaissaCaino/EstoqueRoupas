@@ -20,17 +20,17 @@
             </tr>
         </thead>
         <tbody>
-            {% for roupa in listar_roupas %}  {% for fornecedor in listar_fornecedor %}
+            {% for dado in listar_dados %}
             <tr>
-                <td>{{ roupa[0] }}</td>
-                <td>{{ roupa[1] }}</td>
-                <td>{{ roupa[2] }}</td>
-                <td>{{ fornecedor[0] }}</td>
-                <td>{{ fornecedor[1] }}</td>
-                <td>{{ fornecedor[2] }}</td>
+                <td>{{ dado[0] }}</td>
+                <td>{{ dado[1] }}</td>
+                <td>{{ dado[2] }}</td>
+                <td>{{ dado[3] }}</td>
+                <td>{{ dado[4] }}</td>
+                <td>{{ dado[5] }}</td>
             </tr>
             {% endfor %}    
-            {% endfor %}    
+               
         </tbody>
     </table>
 

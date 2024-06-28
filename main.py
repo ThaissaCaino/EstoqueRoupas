@@ -25,12 +25,26 @@ def index():
 
         # Inserir no database (using parameterized queries)
         inserir_roupas = "INSERT INTO roupas(nome, tamanho, preco) VALUES (%s, %s, %s)"
-        cursor.execute(inserir_roupas, (roupa_nome, roupa_tamanho, roupa_preco))
+        idRoupa = cursor.execute(inserir_roupas, (roupa_nome, roupa_tamanho, roupa_preco))
+        
+        select_id_roupa = "SELECT LAST_INSERT_ID();"
+        cursor.execute(select_id_roupa)
+        idRoupa = cursor.fetchone()[0]
         conexao.commit()
 
         inserir_fornecedor = "INSERT INTO fornecedor(nome, endereco, telefone) VALUES (%s, %s, %s)"
-        cursor.execute(inserir_fornecedor, (fornecedor_nome, fornecedor_endereco, fornecedor_fone))
+        idFornecedor = cursor.execute(inserir_fornecedor, (fornecedor_nome, fornecedor_endereco, fornecedor_fone))
+    
+        select_id_fornecedor= "SELECT LAST_INSERT_ID();"
+        cursor.execute(select_id_fornecedor)
+        idFornecedor = cursor.fetchone()[0]
         conexao.commit()
+
+        inserir_roupas_fornecedor = "INSERT INTO roupas_fornecedor(id_roupas, id_fornecedor) VALUES (%s, %s)"
+        cursor.execute(inserir_roupas_fornecedor, (idRoupa, idFornecedor))
+        conexao.commit()
+
+        conexao.close()
 
         # display mensagem de sucesso
         return "Dados inseridos com sucesso!"
@@ -48,21 +62,15 @@ def consulta():
             JOIN 
                 `estoque_roupas_how_vi`.fornecedor f ON rf.id_fornecedor = f.id_fornecedor''')
     
-                #    SELECT nome, tamanho, preco FROM roupas
     
     listar_dados = cursor.fetchall()
 
-    # listar_roupas = cursor.fetchall()
-
-    # cursor.execute('''SELECT nome, endereco, telefone FROM fornecedor''')
-    # listar_fornecedor = cursor.fetchall()
     
     return render_template('consulta.html',
                            listar_dados=listar_dados,
-                            # listar_roupas=listar_roupas, 
-                            # listar_fornecedor=listar_fornecedor, 
                             titulo="Lista das roupas e fornecedores"
                             )
-
+    cursor.close()
+    
 if __name__ == '__main__':
     app.run(debug=True)
