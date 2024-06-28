@@ -55,20 +55,22 @@ def index():
 
 @app.route('/consulta', methods=['GET', 'POST'])
 def consulta():
-    cursor.execute('''SELECT nome, tamanho, preco FROM roupas''')
-    listar_roupas = cursor.fetchall()
+    cursor.execute('''SELECT * FROM 
+                `estoque_roupas_how_vi`.roupas r
+            JOIN 
+                `estoque_roupas_how_vi`.roupas_fornecedor rf ON r.id_roupas = rf.id_roupas
+            JOIN 
+                `estoque_roupas_how_vi`.fornecedor f ON rf.id_fornecedor = f.id_fornecedor''')
+    
+    
+    listar_dados = cursor.fetchall()
 
-    cursor.execute('''SELECT nome, endereco, telefone FROM fornecedor''')
-    listar_fornecedor = cursor.fetchall()
-
-    print(listar_roupas)
-    print(listar_fornecedor)
     
     return render_template('consulta.html',
-                            listar_roupas=listar_roupas, 
-                            listar_fornecedor=listar_fornecedor, 
+                           listar_dados=listar_dados,
                             titulo="Lista das roupas e fornecedores"
                             )
     cursor.close()
+    
 if __name__ == '__main__':
     app.run(debug=True)

@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS `estoque_roupas_how_vi`.`roupas` (
   `id_roupas` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `nome` VARCHAR(45) NOT NULL,
   `tamanho` VARCHAR(5) NOT NULL,
-  `preco` Double NOT NULL);
+  `preco` DOUBLE NOT NULL);
 
 -- -----------------------------------------------------
 -- Table `estoque_roupas_how_vi`.`fornecedor`
