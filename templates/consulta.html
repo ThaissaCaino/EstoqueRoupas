@@ -8,5 +8,32 @@
 </head>
 <body>
     <!-- TABELA PARA EXIBIÇÃO DOS DADOS -->
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nome da Roupa</th>
+                <th>Tamanho</th>
+                <th>Preço</th>
+                <th>Nome do Fornecedor</th>
+                <th>Endereço do Fornecedor</th>
+                <th>Telefone do Fornecedor</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for roupa in listar_roupas %}  {% for fornecedor in listar_fornecedor %}
+            <tr>
+                <td>{{ roupa[0] }}</td>
+                <td>{{ roupa[1] }}</td>
+                <td>{{ roupa[2] }}</td>
+                <td>{{ fornecedor[0] }}</td>
+                <td>{{ fornecedor[1] }}</td>
+                <td>{{ fornecedor[2] }}</td>
+            </tr>
+            {% endfor %}    
+            {% endfor %}    
+        </tbody>
+    </table>
+
+    <a href="/"><button class="button">Voltar</button></a>
 </body>
 </html>
